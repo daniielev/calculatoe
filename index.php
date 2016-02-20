@@ -2,8 +2,6 @@
 $proyectName = "Calculator with AngularJS &amp; PHP";
 $styleFiles = ["/css/app.css"];
 $scriptFiles = ["/js/angular.min.js", "/js/app.js"];
-$keysPanel1 = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", ".", "="];
-$keysPanel1 = ["+", "-", "÷", "x"];
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -18,14 +16,14 @@ $keysPanel1 = ["+", "-", "÷", "x"];
   </head>
     <body>
 
-        <div id="calculator">
+        <div class="calculator">
             <div class="calculator__Heading">
-                <div class="calculator--screen"></div>
+                <div id="screen">12+2</div>
             </div>
-            <div class="calculator__Keys">
+            <div class="calculator__Keys clear">
                 <div class="panel-1">
-                    <button type="button">C</button>
-                    <button type="button">%mod</button>
+                    <button type="button" class="double">C</button>
+                    <button type="button">%</button>
                     <button type="button">7</button>
                     <button type="button">8</button>
                     <button type="button">9</button>
@@ -36,13 +34,13 @@ $keysPanel1 = ["+", "-", "÷", "x"];
                     <button type="button">2</button>
                     <button type="button">3</button>
                     <button type="button">0</button>
-                    <button type="button">=</button>
+                    <button type="button" class="calculator__Keys--operator double">=</button>
                 </div>
                 <div class="panel-2">
-                    <button type="button">÷</button>
-                    <button type="button">x</button>
-                    <button type="button">-</button>
-                    <button type="button">+</button>
+                    <button type="button" class="calculator__Keys--operator">÷</button>
+                    <button type="button" class="calculator__Keys--operator">x</button>
+                    <button type="button" class="calculator__Keys--operator">-</button>
+                    <button type="button" class="calculator__Keys--operator taller">+</button>
                 </div>
             </div>
         </div>
