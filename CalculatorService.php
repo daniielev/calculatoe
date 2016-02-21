@@ -24,6 +24,9 @@ class CalculatorService {
      * @return {integer}
      */
     function addition ($firstVale, $secondValue) {
+        /**
+         * We make sure the request is valid so the operation will be perform successfully
+         */
         if ($this->isRequestValid()) {
             return ($firstVale + $secondValue);
         }
