@@ -19,31 +19,31 @@ $scriptFiles = ["/js/angular.min.js", "/js/CalculatorService.js", "/js/app.js"];
 
         <div class="calculator" data-ng-app="calculatorApp" data-ng-controller="CalculatorCtrl">
             <div class="calculator__Heading">
-                <div id="screen"></div>
+                <div id="screen">{{ screen }}</div>
             </div>
 
             <div class="calculator__Keys clear">
                 <div class="panel-1">
-                    <button type="button" class="double">C</button>
-                    <button type="button" class="tooltip">%</button>
-                    <button type="button">7</button>
-                    <button type="button">8</button>
-                    <button type="button">9</button>
-                    <button type="button">4</button>
-                    <button type="button">5</button>
-                    <button type="button">6</button>
-                    <button type="button">1</button>
-                    <button type="button">2</button>
-                    <button type="button">3</button>
-                    <button type="button">0</button>
-                    <button type="button" class="calculator__Keys--operator double">=</button>
+                    <button data-ng-click="clearAll()" type="button" class="double">C</button>
+                    <button data-ng-click="setValue('modulus')" type="button" class="tooltip">%</button>
+                    <button data-ng-click="setValue(7)" type="button">7</button>
+                    <button data-ng-click="setValue(8)" type="button">8</button>
+                    <button data-ng-click="setValue(9)" type="button">9</button>
+                    <button data-ng-click="setValue(4)" type="button">4</button>
+                    <button data-ng-click="setValue(5)" type="button">5</button>
+                    <button data-ng-click="setValue(6)" type="button">6</button>
+                    <button data-ng-click="setValue(1)" type="button">1</button>
+                    <button data-ng-click="setValue(2)" type="button">2</button>
+                    <button data-ng-click="setValue(3)" type="button">3</button>
+                    <button data-ng-click="setValue(0)" type="button">0</button>
+                    <button data-ng-click="getResult()" type="button" class="calculator__Keys--operator double">=</button>
                 </div>
 
                 <div class="panel-2">
-                    <button type="button" class="calculator__Keys--operator">÷</button>
-                    <button type="button" class="calculator__Keys--operator">x</button>
-                    <button type="button" class="calculator__Keys--operator">-</button>
-                    <button type="button" class="calculator__Keys--operator taller">+</button>
+                    <button data-ng-click="setValue('division')" type="button" class="calculator__Keys--operator">÷</button>
+                    <button data-ng-click="setValue('multiplication')" type="button" class="calculator__Keys--operator">x</button>
+                    <button data-ng-click="setValue('subtraction')" type="button" class="calculator__Keys--operator">-</button>
+                    <button data-ng-click="setValue('addition')" type="button" class="calculator__Keys--operator taller">+</button>
                 </div>
             </div>
         </div><!-- ends Calculator module -->
