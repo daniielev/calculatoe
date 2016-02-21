@@ -1,7 +1,7 @@
 <?php
 $proyectName = "Calculator with AngularJS &amp; PHP";
 $styleFiles = ["/css/app.css"];
-$scriptFiles = ["/js/angular.min.js", "/js/app.js", "/js/services.js", "/js/CalculatorService.js", "/js/controllers.js", "/js/CalculatorCtrl.js"];
+$scriptFiles = ["/js/angular.min.js", "/js/CalculatorService.js", "/js/app.js"];
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -17,7 +17,7 @@ $scriptFiles = ["/js/angular.min.js", "/js/app.js", "/js/services.js", "/js/Calc
     </head>
     <body>
 
-        <div class="calculator" ng-app="calculatorApp">
+        <div class="calculator" data-ng-app="calculatorApp" data-ng-controller="CalculatorCtrl">
             <div class="calculator__Heading">
                 <div id="screen"></div>
             </div>
