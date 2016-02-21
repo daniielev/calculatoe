@@ -1,30 +1,31 @@
 <?php
 $proyectName = "Calculator with AngularJS &amp; PHP";
 $styleFiles = ["/css/app.css"];
-$scriptFiles = ["/js/angular.min.js", "/js/app.js"];
+$scriptFiles = ["/js/angular.min.js", "/js/app.js", "/js/services.js", "/js/CalculatorService.js", "/js/controllers.js", "/js/CalculatorCtrl.js"];
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo($proyectName); ?></title>
-    <?php foreach ($styleFiles as $style) { ?>
-    <link rel="stylesheet" href="<?php echo($style); ?>">
-    <?php } ?>
-  </head>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><?php echo($proyectName); ?></title>
+        <!-- Styles -->
+<?php foreach ($styleFiles as $style) { ?>
+        <link rel="stylesheet" href="<?php echo($style); ?>">
+<?php } ?>
+    </head>
     <body>
 
-        <div class="calculator">
+        <div class="calculator" ng-app="calculatorApp">
             <div class="calculator__Heading">
-                <div id="screen">{{ result }}</div>
+                <div id="screen"></div>
             </div>
 
             <div class="calculator__Keys clear">
                 <div class="panel-1">
                     <button type="button" class="double">C</button>
-                    <button type="button">%</button>
+                    <button type="button" class="tooltip">%</button>
                     <button type="button">7</button>
                     <button type="button">8</button>
                     <button type="button">9</button>
@@ -47,8 +48,9 @@ $scriptFiles = ["/js/angular.min.js", "/js/app.js"];
             </div>
         </div><!-- ends Calculator module -->
 
-    <?php foreach ($scriptFiles as $script) { ?>
+        <!-- Scripts -->
+<?php foreach ($scriptFiles as $script) { ?>
         <script src="<?php echo($script); ?>"></script>
-    <?php } ?>
+<?php } ?>
     </body>
 </html>
