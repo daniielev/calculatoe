@@ -1,6 +1,6 @@
 angular.module('calculatorApp', [])
     // Set the back-end common URL
-    .value('URLBase', '/controller.php')
+    .value('URLBase', 'https://danielmunnoz.com/cenfotec/calculator/controller.php')
     /**
      * Definimos un servicio que interactuará con el back-end.
      */
