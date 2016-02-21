@@ -36,7 +36,7 @@ $scriptFiles = ["/js/angular.min.js", "/js/CalculatorService.js", "/js/app.js"];
                     <button data-ng-click="setValue(2)" type="button">2</button>
                     <button data-ng-click="setValue(3)" type="button">3</button>
                     <button data-ng-click="setValue(0)" type="button">0</button>
-                    <button data-ng-click="getResult()" type="button" class="calculator__Keys--operator double">=</button>
+                    <button data-ng-click="getResult()" ng-disabled="!input.length" type="button" class="calculator__Keys--operator double">=</button>
                 </div>
 
                 <div class="panel-2">

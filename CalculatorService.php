@@ -32,7 +32,7 @@ class CalculatorService {
         }
     }
 
-     /**
+    /**
      * Takes the first digit and the second one and performs
      * a subtraction of both numbers.
      *
