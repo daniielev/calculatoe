@@ -65,12 +65,12 @@ if ($isRequestValid) {
 }
 
 /**
-     * Avoids data type issues. Evaluates if the data
-     * provided from the controller is numeric, if not
-     * then it will set the two digits to integer type.
-     *
-     * @return {array}
-     */
+ * Avoids data type issues. Evaluates if the data
+ * provided from the controller is numeric, if not
+ * then it will set the two digits to integer type.
+ *
+ * @return {array}
+ */
 function prepareData () {
     $data = [];
 

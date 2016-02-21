@@ -25,7 +25,7 @@ $scriptFiles = ["/js/angular.min.js", "/js/CalculatorService.js", "/js/app.js"];
             <div class="calculator__Keys clear">
                 <div class="panel-1">
                     <button data-ng-click="clearAll()" type="button" class="double">C</button>
-                    <button data-ng-click="setValue('modulus')" type="button" class="tooltip">%</button>
+                    <button data-ng-click="setValue('%')" ng-disabled="operatorClicked || !input.length" type="button" class="tooltip">%</button>
                     <button data-ng-click="setValue(7)" type="button">7</button>
                     <button data-ng-click="setValue(8)" type="button">8</button>
                     <button data-ng-click="setValue(9)" type="button">9</button>
@@ -40,10 +40,10 @@ $scriptFiles = ["/js/angular.min.js", "/js/CalculatorService.js", "/js/app.js"];
                 </div>
 
                 <div class="panel-2">
-                    <button data-ng-click="setValue('division')" type="button" class="calculator__Keys--operator">÷</button>
-                    <button data-ng-click="setValue('multiplication')" type="button" class="calculator__Keys--operator">x</button>
-                    <button data-ng-click="setValue('subtraction')" type="button" class="calculator__Keys--operator">-</button>
-                    <button data-ng-click="setValue('addition')" type="button" class="calculator__Keys--operator taller">+</button>
+                    <button data-ng-click="setValue('÷')" ng-disabled="operatorClicked || !input.length" type="button" class="calculator__Keys--operator">÷</button>
+                    <button data-ng-click="setValue('x')" ng-disabled="operatorClicked || !input.length" type="button" class="calculator__Keys--operator">x</button>
+                    <button data-ng-click="setValue('-')" ng-disabled="operatorClicked || !input.length" type="button" class="calculator__Keys--operator">-</button>
+                    <button data-ng-click="setValue('+')" ng-disabled="operatorClicked || !input.length" type="button" class="calculator__Keys--operator taller">+</button>
                 </div>
             </div>
         </div><!-- ends Calculator module -->
