@@ -1,8 +1,9 @@
 angular.module('calculatorApp', [])
+    // Set the back-end common URL
+    .value('URLBase', '/controller.php')
     /**
      * Definimos un servicio que interactuará con el back-end.
      */
-    .value('URLBase', '/controller.php')
     .service('CalculatorService', ['$http', 'URLBase',
         function($http, URLBase) {
             /**
@@ -12,8 +13,6 @@ angular.module('calculatorApp', [])
              */
             var perform = function (operator, firstDigit, secondDigit) {
                 var url = URLBase + '?operation=' + operator + '&firstDigit=' + firstDigit + '&secondDigit=' + secondDigit;
-
-                console.log(url);
 
                 return $http({
                     method: "GET",
