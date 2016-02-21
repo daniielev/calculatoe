@@ -10,16 +10,17 @@ $scriptFiles = ["/js/angular.min.js", "/js/app.js"];
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo($proyectName); ?></title>
-<?php foreach ($styleFiles as $style) { ?>
+    <?php foreach ($styleFiles as $style) { ?>
     <link rel="stylesheet" href="<?php echo($style); ?>">
-<?php } ?>
+    <?php } ?>
   </head>
     <body>
 
         <div class="calculator">
             <div class="calculator__Heading">
-                <div id="screen">12+2</div>
+                <div id="screen">{{ result }}</div>
             </div>
+
             <div class="calculator__Keys clear">
                 <div class="panel-1">
                     <button type="button" class="double">C</button>
@@ -36,6 +37,7 @@ $scriptFiles = ["/js/angular.min.js", "/js/app.js"];
                     <button type="button">0</button>
                     <button type="button" class="calculator__Keys--operator double">=</button>
                 </div>
+
                 <div class="panel-2">
                     <button type="button" class="calculator__Keys--operator">÷</button>
                     <button type="button" class="calculator__Keys--operator">x</button>
@@ -43,10 +45,10 @@ $scriptFiles = ["/js/angular.min.js", "/js/app.js"];
                     <button type="button" class="calculator__Keys--operator taller">+</button>
                 </div>
             </div>
-        </div>
+        </div><!-- ends Calculator module -->
 
-<?php foreach ($scriptFiles as $script) { ?>
+    <?php foreach ($scriptFiles as $script) { ?>
         <script src="<?php echo($script); ?>"></script>
-<?php } ?>
+    <?php } ?>
     </body>
 </html>
