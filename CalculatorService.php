@@ -1,5 +1,4 @@
 <?php
-
 /**
 * Represents the calculator.
 *

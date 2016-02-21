@@ -3,8 +3,8 @@ angular.module('calculatorApp')
      * Definimos un controlador que consume el servicio.
      */
     .controller('CalculatorCtrl',
-        ['$scope', 'CalculadoraService',
-            function ($scope, CalculadoraService) {
+        ['$scope', 'CalculatorService',
+            function ($scope, CalculatorService) {
                 /**
                  * Initializes the variable values and objects status
                  */
@@ -75,15 +75,24 @@ angular.module('calculatorApp')
                             $scope.firstDigit = $scope.input[0];
                             $scope.secondDigit = $scope.input[1];
                             $scope.operator = returnOperator(_input);
-                            console.log($scope.operator);
                         }
 
                         // Reset values
                         $scope.input = "";
                         $scope.operatorClicked = false;
 
-                        // Finally, prints the result on the screen
-                        $scope.screen = "sdf";
+                        // Calls the Calculator Service that will perform the operation
+                        CalculatorService
+                            // Sends the data
+                            .perform($scope.operator, $scope.firstDigit, $scope.secondDigit)
+                            .then(function(response) {
+                                if (response.data) {
+                                    // Prints the result
+                                    $scope.screen = response.data;
+                                }
+                            }, function(response) {
+                                $scope.finalResult = response;
+                            });
                     }
                 }; // ENDS getResult FUNCTION
 

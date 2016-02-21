@@ -77,7 +77,7 @@ function prepareData () {
     $firstDigit = $_REQUEST['firstDigit'];
 
     // If the second value is not present on the request, then its asumed it is 0 (zero)
-    $secondDigit = $_REQUEST['secondDigit'] || 0;
+    $secondDigit = $_REQUEST['secondDigit'];
 
     // Converts the first value to integer
     if (!is_int($firstDigit)) {
